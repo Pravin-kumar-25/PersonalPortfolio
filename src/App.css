@@ -1,38 +1,365 @@
-.App {
-  text-align: center;
+
+:root {
+  --mainColor: #E90000;
+  --subColor: #FFE600;
+  --thirdColor:#D2A0A0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(./Components/Utils/pictures/hero-section-bg.png);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 40px 170px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header-logo {
+  display: flex;
+  cursor: pointer;
+}
+
+.logo-letter {
+  font-family: 'Poppins';
+  font-weight: 800;
+  position: relative;
+  font-size: 3em;
+}
+
+#shadow-letter {
+  color: var(--subColor);
+}
+
+#main-letter {
+  position: absolute;
+  color: var(--mainColor);
+  left: 5px;
+}
+
+.nav-links {
+  display: flex;
+  border-radius: 20px;
+}
+
+.nav-links ul {
+  position: relative;
+  left: 0;
+  padding-inline-start: 0;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  justify-content: space-evenly;
+}
+
+.nav-links li {
+  list-style-type: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.5em;
+  line-height: 42px;
+  transition: 0.3s ease-in;
+}
+
+.nav-links a:hover {
+  color: var(--mainColor);
+}
+
+.main-body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-body {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.hero-body-image {
+  background: url(./Components/Utils/pictures/hero_illustration.png);
+  background-repeat: no-repeat;
+  width: 577px;
+  height: 474px;
+}
+
+.hero-body-details {
+  display: flex;
+  flex-direction: column;
+  width: 625px;
+  height: 420px;
+}
+
+.name {
+  position: relative;
+  font-family: "Poppins";
+font-style: italic;
+font-weight: 900;
+font-size: 61px;
+line-height: 91px;
+
+color: var(--thirdColor);
+}
+
+.bounce {
+  position: relative;
+  transition: .2s;
+}
+
+.bounce:hover {
+  text-shadow: 2px 0 var(--subColor);
+  color: var(--mainColor);
+  animation: shrink 1s ease-in-out;
+}
+
+.body-logo {
+  font-size: 1.5em;
+}
+
+@keyframes shrink {
+  0%{
+    top: 0px;
   }
-  to {
-    transform: rotate(360deg);
+  20%{
+    top: -8px;
+  }
+  30%{
+    top: -10px;
+  }
+  50%{
+    top: 0;
+  }
+  60%{
+    top: -5px;
+  }
+  70%{
+    top: 0;
+  }
+  100%{
+    top: 0;
   }
 }
+
+.waves {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  z-index: 10000;
+}
+
+.wave-1 {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background: url(./Components/Utils/pictures/wave.png);
+  background-size: 2000px 200px;
+  animation: wave 5s linear infinite;
+}
+
+.wave-2 {
+  position: absolute;
+  width: 100%;
+  background: url(./Components/Utils/pictures/wave.png);
+  height: 200px;
+  background-size: 2000px 200px;
+  opacity: 0.5;
+  animation: wave 10s linear infinite;
+  animation-delay: 1s;
+}
+
+.wave-3 {
+  position: absolute;
+  width: 100%;
+  background: url(./Components/Utils/pictures/wave.png);
+  height: 200px;
+  background-size: 2000px 200px;
+  opacity: 0.3;
+  animation: wave 15s linear infinite alternate;
+  animation-delay: 3s;
+}
+
+@keyframes wave {
+  0%{
+    background-position-x: 0;
+  }
+  100%{
+    background-position-x: 2000px;
+  }
+}
+
+.sub-heading span {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 900;
+  font-size: 61px;
+  color: var(--mainColor);
+}
+
+.main-detail span{
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 100;
+  font-size: 1.5em;
+  color: #FFFFFF;
+  line-height: 10px;
+}
+
+.social-links {
+  position: absolute;
+  width: 50px;
+  z-index: 1;
+  right: 0;
+  top: 50px;
+}
+
+.social {
+  position: relative;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  z-index: 2;
+  cursor: pointer;
+  color: black;
+  font-weight: 800;
+}
+
+.social-before {
+  transition: .2s linear;
+  content: '';
+  width: 4px;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background: var(--subColor);
+  z-index: -3;
+}
+
+.social:hover .social-before {
+  width: 50px;
+  color: black;
+}
+
+.glitch-btn {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  outline: transparent;
+  width: 250px;
+  height: 40px;
+  background: linear-gradient(45deg,transparent 5%,var(--mainColor) 5%);
+  border: 0;
+  margin-top: 30px;
+  box-shadow: 6px 0px 0px var(--subColor);
+  border-top: 0.01px solid var(--subColor);
+  cursor: pointer;
+}
+.glitch-btn::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "CONTACT ME";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+   bottom: 0;
+   background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
+   text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+  clip-path: var(--slice-0);
+}
+
+.glitch-btn span {
+  color: white;
+  letter-spacing: 0.5em;
+  font-weight: 900;
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+
+.glitch-btn:hover::after {
+   animation: 1s glitch;
+   animation-timing-function: steps(2, end);
+  }
+  
+  @keyframes glitch {
+   0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+   }
+  
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+   }
+  
+   20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+   }
+  
+   30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+   }
+  
+   40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+   }
+  
+   50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+   }
+  
+   60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+   }
+  
+   70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+   }
+  
+   80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+   }
+  
+   90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+   }
+  
+   100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+   }
+  }
