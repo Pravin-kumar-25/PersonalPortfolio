@@ -1,0 +1,77 @@
+.contact-me-div {
+    position: absolute;
+    background: var(--subColor);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 630px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    padding-top: 10px;
+    align-items: center;
+    z-index: 4000;
+    border-radius: 30px;
+}
+.form-heading {
+    height: 70px;
+    width: 80%;
+    font-size: 2em;
+    font-weight: 800;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-me-form {
+    height: 70%;
+    background: red;
+    width: 80%;
+}
+
+.submit button {
+    position: relative;
+    border: none;
+    display: block;
+    background: black;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    width: 220px;
+    height: 60px;
+    z-index: 1;
+    letter-spacing: 8px;
+}
+
+.submit button .btn-span {
+    position: absolute;
+    width: 95%;
+    height: 80%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    border-right: 10px solid white;
+    border: 5px solid blue;
+    background: transparent;
+}
+
+.submit button .btn-span::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 8%;
+    height: 500%;
+    top: 50%;
+    left: 50%;
+    background: black;
+    /* z-index: -1; */
+    transform: translate(-50%,-50%) rotate(-60deg);
+    transition: all 0.4s;
+}
+
+.submit button:hover .btn-span::before{
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+}

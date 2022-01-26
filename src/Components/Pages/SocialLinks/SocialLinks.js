@@ -13,13 +13,13 @@ const SocialLinks = () => {
     const iconSize = '25px';
 
     const socialLinkHover = (event) => {
-        if (event.target.id === "facebook" || event.target.id==="fb" ) {
+        if (event.target.id === "facebook" || event.target.id === "fb") {
             setfacebook(true)
-        } else if (event.target.id === "insta"|| event.target.id==="ins" ) {
+        } else if (event.target.id === "insta" || event.target.id === "ins") {
             setinsta(true)
-        } else if (event.target.id === "linkedin"|| event.target.id==="in" ) {
+        } else if (event.target.id === "linkedin" || event.target.id === "in") {
             setlinkedin(true)
-        } else if (event.target.id === 'telegram' || event.target.id==="tl" ) {
+        } else if (event.target.id === 'telegram' || event.target.id === "tl") {
             settelegram(true)
         }
     }
