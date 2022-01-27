@@ -382,7 +382,7 @@ color: var(--thirdColor);
   .close-btn span {
     position: absolute;
     top: 50%;
-    background: black;
+    background: white;
     display: block;
     transition: all .4s;
   }
@@ -419,7 +419,7 @@ color: var(--thirdColor);
   width: 0px;
   height: 0px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.1);
   transition: all 0.3s;
 }
 
