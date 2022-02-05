@@ -3,8 +3,16 @@ import './App.css';
 import HeroSectionBody from './Components/Pages/HeroSection/HeroSectionBody';
 import SocialLinks from './Components/Pages/SocialLinks/SocialLinks';
 import ContactMePage from './Components/Pages/Contact/ContactMePage';
+import SideNavLink from './Components/Pages/SideNavBar/SideNavLink';
+import Skills from './Components/Pages/Skills/Skills'
+import AOS from 'aos';
+
 
 function App() {
+  AOS.init({
+    duration:1200
+  })
+  
   const [contactPage, setcontactPage] = useState(false)
   let bodyDivStyle = {}
 
@@ -15,10 +23,10 @@ function App() {
       userSelect:"none",
     }
   }
-  
 
   return (
     <>
+    <SideNavLink />
       {
         contactPage ? <ContactMePage setcontactPage={setcontactPage} /> : null
       }
@@ -26,6 +34,7 @@ function App() {
       <SocialLinks />
       <HeroSectionBody setcontactPage={setcontactPage} />
       </div>
+      <Skills />
     </>
   )
 }

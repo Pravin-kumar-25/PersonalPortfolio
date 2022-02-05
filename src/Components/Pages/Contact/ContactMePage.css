@@ -20,6 +20,7 @@
     border-radius: 30px;
     border: 1px solid white;
     transition: all 0.5s;
+    box-shadow: 40px 20px 1px var(--mainColor);
     animation: move-down .5s  ease-in;
     /* animation-fill-mode: forwards; */
 }
@@ -33,6 +34,10 @@
     color: var(--formTextColor);
     justify-content: space-between;
     margin-top: 10px;
+}
+.form-heading svg {
+    top: 6px;
+    position: relative;
 }
 
 .contact-me-form {
@@ -164,4 +169,34 @@ input:focus,
     user-select: none;
 }
 
+@media screen and (max-width:869px) {
+    .contact-me-div {
+      width: 70%;
+      box-shadow: none;
+    }
+    .form-heading {
+        font-size: 20px;
+    }
+  }
 
+@media screen and (max-width:445px) {
+    .contact-me-div {
+        width: 90%;
+        background: rgba(0, 0, 0, 0.65);
+        border: rgba(255, 255, 255, 0.15);
+    }
+    .submit {
+        justify-content: center;
+        align-items: center;
+    }
+    .form-heading svg {
+        top: 2px;
+    }
+    .close-btn {
+        height: 30px;
+        width: 30px;
+    }
+    #send-message-input:focus span {
+        top: 80px;
+    }
+}

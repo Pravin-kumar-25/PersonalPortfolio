@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import "./ContactMePage.css"
 import { SiMinutemailer } from "react-icons/si";
 import { RiMailAddLine } from "react-icons/ri";
@@ -17,23 +17,28 @@ const ContactMePage = ({ setcontactPage }) => {
         }, 300)
     }
 
+    const ref = useRef();
+
     const escapeHandler = (event) => {
         if(event.keyCode === 27) {
             setValue(false)
         }
     }
     useEffect(() => {
+        const closeContactDiv = (event) => {
+            if(ref.current.contains(event.target)){
+                return;
+            } else {
+                setValue(false)
+            }
+        }
         document.addEventListener("keyup", escapeHandler);
+        document.body.addEventListener("click",closeContactDiv)
         return () => {
             document.removeEventListener("keyup", escapeHandler);
+            document.body.removeEventListener("click",closeContactDiv);
         };
     });
-
-
-    let boxShadow = "none"
-    if (top === "none") {
-        boxShadow = "40px 20px 1px var(--mainColor)"
-    }
 
     const onSubmit = (event) => {
         event.preventDefault();
@@ -55,7 +60,7 @@ const ContactMePage = ({ setcontactPage }) => {
         } else if (event.target.className === "description") {
             setdescriptionSpanStyle({
                 top: "10px",
-                fontSize: "30px",
+                fontSize: "20px",
                 fontWeight: "800"
             })
         }
@@ -86,9 +91,9 @@ const ContactMePage = ({ setcontactPage }) => {
     return (
 
 
-        <div className='contact-me-div' style={{ top: top, boxShadow: boxShadow }}>
+        <div className='contact-me-div' style={{ top: top }} ref={ref}>
             <div className='form-heading'>
-                <div> <RiMailAddLine style={{ top: "6px", position: "relative" }} /> CONTACT ME</div>
+                <div> <RiMailAddLine/> CONTACT ME</div>
                 <CloseButton setcontactPage={setValue} />
             </div>
             <form onSubmit={onSubmit} className='contact-me-form'>
@@ -101,7 +106,7 @@ const ContactMePage = ({ setcontactPage }) => {
                     <input spellCheck="false" className='email-class' onFocus={onFocus} onBlur={onBlur} />
                 </div>
                 <div id='send-message-input'>
-                    <span style={descriptionSpanStyle}>Type your message...</span>
+                    <span style={descriptionSpanStyle}>Type your message..</span>
                     <textarea className='description' onFocus={onFocus} onBlur={onBlur} />
                 </div>
                 <div className='submit'>

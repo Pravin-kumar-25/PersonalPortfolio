@@ -4,7 +4,8 @@ import HomeBody from './HomeBody';
 
 const HeroSectionBody = ({ setcontactPage }) => {
     return (
-        <section className='heroSection'>
+        <section className='heroSection' id='home'>
+            <span className='section-background-heading' data-aos="slide-up">HOME</span>
             <Header />
             <HomeBody setcontactPage={setcontactPage} />
             <div className='waves'>

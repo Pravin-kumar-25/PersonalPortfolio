@@ -1,19 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ContactMe from '../Contact/ContactMe';
+import aos from 'aos';
 
 const HomeBody = ({ setcontactPage }) => {
+    aos.init({
+        duration:1200
+    })
     return (
         <div className='main-body'>
             <div className='hero-body'>
                 <div className='hero-body-details'>
-                    <div className='name'>
+                    <div className='name' data-aos="fade-right">
                         <span className='bounce'>H</span>
                         <span className='bounce'>i</span>
                         <span className='bounce'>,</span> <br />
                         <span className='bounce'>I</span>
                         <span className='bounce'>'</span>
-                        <span className='bounce'>m</span>
-                        <span> </span>
+                        <span className='bounce'>m &nbsp;</span>
+                        {/* <span> </span> */}
                         <span className='logo-letter body-logo'>
 
                             <span id='shadow-letter'>P</span>
@@ -26,12 +30,12 @@ const HomeBody = ({ setcontactPage }) => {
                         <span className='bounce'>n</span>
                         <span className='bounce'>,</span>
                     </div>
-                    <div className='sub-heading'>
+                    <div className='sub-heading' data-aos="fade-right" data-aos-delay="800">
                         <span>
                             WEB DEVELOPER
                         </span>
                     </div>
-                    <div className='main-detail'>
+                    <div className='main-detail' data-aos="fade-right" data-aos-delay="1200">
                         <span>
                             I create Websites using react JS
                         </span>
