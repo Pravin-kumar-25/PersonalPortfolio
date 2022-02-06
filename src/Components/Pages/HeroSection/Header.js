@@ -16,9 +16,9 @@ const Header = () => {
             setcurrentNav("about")
         }
     }
-    const homeColor = currentNav==="home" ? "var(--mainColor)" : "white";
-    const skillColor = currentNav==="skills" ? "var(--mainColor)" : "white";
-    const aboutColor = currentNav==="about" ? "var(--mainColor)" : "white";
+    const homeColor = currentNav==="home" ? "black" : "white";
+    const skillColor = currentNav==="skills" ? "black" : "white";
+    const aboutColor = currentNav==="about" ? "black" : "white";
 
 
     window.addEventListener("scroll",changeNavLinkColor);
