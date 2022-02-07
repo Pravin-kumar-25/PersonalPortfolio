@@ -135,6 +135,8 @@ color: var(--thirdColor);
 
 .bounce:hover {
   text-shadow: 2px 0 var(--subColor);
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--subColor);
   color: var(--mainColor);
   animation: shrink 1s ease-in-out;
 }
