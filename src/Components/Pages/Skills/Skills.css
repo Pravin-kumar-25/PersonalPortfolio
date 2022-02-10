@@ -14,10 +14,18 @@
     padding: 2px;
     border-radius: 20px;
     margin: 10px;
-    /* position: absolute;
-    top: -250px;
-    left: -125px; */
-    /* width: 600px; */
+}
+
+  .skill-card[data-aos=fade-left][data-aos=fade-left].aos-animate:hover {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: scale(1.18);
+    transition-duration: .5s;
+    transition-delay: 0ms;
+}
+
+[data-aos][data-aos][data-aos-delay="1000"].aos-animate:hover, body[data-aos-delay="1000"] [data-aos].aos-animate:hover {
+    transition-delay: 0s;
 }
 
 .all-skills {
