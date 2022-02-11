@@ -6,48 +6,114 @@ import backEnd from '../../Utils/pictures/backend.png'
 import database from '../../Utils/pictures/server.png'
 import testing from '../../Utils/pictures/exam.png'
 import generalSkills from '../../Utils/pictures/skills.png'
+import html from '../../Utils/pictures/html.png'
+import css from '../../Utils/pictures/css-3.png'
+import react from '../../Utils/pictures/react.png'
+import java from '../../Utils/pictures/java.png'
+import node from '../../Utils/pictures/node-js.png'
+import express from '../../Utils/pictures/js.png'
+import postgresql from '../../Utils/pictures/postgre.png'
+import selenium from '../../Utils/pictures/selenium.png'
+import restAssured from '../../Utils/pictures/restassured.png'
+import git from '../../Utils/pictures/git.png'
+import linux from '../../Utils/pictures/linux.png'
+import postman from '../../Utils/pictures/postman-icon.png'
 import aos from 'aos';
 
 const Skills = () => {
   aos.init()
   const skillObject = [
     {
-      icon:frontEnd,
-      skillHeading:"Frontend",
-      skills:['HTML','CSS','React JS'],
+      icon: frontEnd,
+      skillHeading: "Frontend",
+      skills: [{
+        icon: html,
+        skill: "HTML"
+      },
+      {
+        icon: css,
+        skill: "CSS"
+      },
+      {
+        icon: react,
+        skill: "React JS"
+      }],
     },
     {
-      icon:backEnd,
-      skillHeading:"Backend",
-      skills:['JAVA','Node JS','Express JS'],
+      icon: backEnd,
+      skillHeading: "Backend",
+      skills: [
+        {
+          icon: java,
+          skill: "JAVA"
+        },
+        {
+          icon: node,
+          skill: "Node JS"
+        },
+        {
+          icon: express,
+          skill: "Express JS"
+        }
+      ],
     },
     {
-      icon:database,
-      skillHeading:"Database",
-      skills:['Postgresql'],
+      icon: database,
+      skillHeading: "Database",
+      skills: [
+        {
+          icon: postgresql,
+          skill: "Postgresql"
+        }
+      ],
     },
     {
-      icon:testing,
-      skillHeading:"Testing",
-      skills:['Selenium','Rest Assured'],
+      icon: testing,
+      skillHeading: "Testing",
+      skills: [
+        {
+          icon: selenium,
+          skill: "Selenium Automation"
+        },
+        {
+          icon: restAssured,
+          skill: "Rest Assured API Automation"
+        }
+      ],
     },
     {
-      icon:generalSkills,
-      skillHeading:"General Technology",
-      skills:['Git','Linux','Postman'],
+      icon: generalSkills,
+      skillHeading: "General Technology",
+      skills: [
+        {
+          icon: git,
+          skill: "Git"
+        },
+        {
+          icon: linux,
+          skill: "Linux"
+        },
+        {
+          icon: postman,
+          skill: "Postman"
+        }
+      ],
     },
   ]
 
   return (
     <section className='skills-section' id='skills'>
-        <span className='section-background-heading' data-aos="slide-up">SKILLS</span>
-        <div className='all-skills'>
-        <Skill key={skillObject[0].skillHeading} pngName={skillObject[0].icon} skillHeading={skillObject[0].skillHeading} skills={skillObject[0].skills} delay={200}/>
-        <Skill key={skillObject[1].skillHeading} pngName={skillObject[1].icon} skillHeading={skillObject[1].skillHeading} skills={skillObject[1].skills} delay={400}/>
-        <Skill key={skillObject[2].skillHeading} pngName={skillObject[2].icon} skillHeading={skillObject[2].skillHeading} skills={skillObject[2].skills} delay={600}/>
-        <Skill key={skillObject[3].skillHeading} pngName={skillObject[3].icon} skillHeading={skillObject[3].skillHeading} skills={skillObject[3].skills} delay={800}/>
-        <Skill key={skillObject[4].skillHeading} pngName={skillObject[4].icon} skillHeading={skillObject[4].skillHeading} skills={skillObject[4].skills} delay={1000}/>
-        </div>
+      <span className='section-background-heading' data-aos="slide-up">SKILLS</span>
+      <div className='skills-header' data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
+        <h1>My skills</h1>
+      </div>
+      <div className='all-skills'>
+        <Skill key={skillObject[0].skillHeading} pngName={skillObject[0].icon} skillHeading={skillObject[0].skillHeading} skills={skillObject[0].skills} delay={200} />
+        <Skill key={skillObject[1].skillHeading} pngName={skillObject[1].icon} skillHeading={skillObject[1].skillHeading} skills={skillObject[1].skills} delay={400} />
+        <Skill key={skillObject[2].skillHeading} pngName={skillObject[2].icon} skillHeading={skillObject[2].skillHeading} skills={skillObject[2].skills} delay={600} />
+        <Skill key={skillObject[3].skillHeading} pngName={skillObject[3].icon} skillHeading={skillObject[3].skillHeading} skills={skillObject[3].skills} delay={800} />
+        <Skill key={skillObject[4].skillHeading} pngName={skillObject[4].icon} skillHeading={skillObject[4].skillHeading} skills={skillObject[4].skills} delay={1000} />
+      </div>
     </section>
   );
 };

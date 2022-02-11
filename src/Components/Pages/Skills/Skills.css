@@ -5,23 +5,40 @@
     position: relative;
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
+}
+
+.skills-header h1 {
+    font-family: "Shizuru",cursive;
+    color: black;
+    font-size: 80px;
+    font-weight: 100;
 }
 
 .skill-card {
     background: var(--mainColor);
+    display: flex;
+    position: relative;
     padding: 2px;
     border-radius: 20px;
     margin: 10px;
+    box-shadow: 0px 0px 20px 0px black;
+    cursor: url(../../Utils/pictures/tap.png),pointer;
 }
 
   .skill-card[data-aos=fade-left][data-aos=fade-left].aos-animate:hover {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: scale(1.18);
+    transform: scale(1.15);
     transition-duration: .5s;
     transition-delay: 0ms;
+    box-shadow: 0px 0px 20px 10px black;
+
+}
+
+.skill-card:hover .main-skill-card{
+    background: var(--mainColor);
+    color: var(--subColor);
 }
 
 [data-aos][data-aos][data-aos-delay="1000"].aos-animate:hover, body[data-aos-delay="1000"] [data-aos].aos-animate:hover {
@@ -32,6 +49,7 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    top: -50px;
 }
 
 .main-skill-card {
@@ -42,12 +60,39 @@
     border-radius: 20px;
     width: 250px;
     height: 400px;
-    background: white;
+    background: black;
     font-size: 20px;
     font-weight: 800;
+    color: white;
+    z-index: 1;
 }
 
 .main-skill-card img {
     width: 100px;
     height: 100px;
+}
+
+.inner-skills {
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    position: relative;
+    margin: 10px;
+}
+
+.each-inner-skill{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: var(--subColor);
+}
+
+.each-inner-skill img{
+    width: 30px;
+}
+
+.each-inner-skill span span {
+    color: black;
 }

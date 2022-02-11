@@ -2,6 +2,9 @@ import React,{useState} from 'react';
 import aos from 'aos';
 
 const Skill = ({pngName,skillHeading,skills,delay}) => {
+    aos.init({
+        duration:"1200"
+    })
     const temp = delay;
     const [isDelay, setIsDelay] = useState(true)
     if(isDelay) {
@@ -9,7 +12,22 @@ const Skill = ({pngName,skillHeading,skills,delay}) => {
     } else {
         delay = 0;
     }
-    aos.init()
+
+    const innerSkills = () => {
+        let innerSkillsArray = [];
+        skills.forEach(eachSkill => {
+            console.log("hh");
+            let div = (
+                <div className='each-inner-skill' data-aos='fade-right'>
+                     <img src={eachSkill.icon} alt={eachSkill.skill} />
+                     <span><span>--</span> {eachSkill.skill}</span>
+                </div>
+            )
+            innerSkillsArray.push(div)
+        });
+        console.log("jk");
+        return innerSkillsArray;
+    }
     return (
         <div className='skill-card' data-aos="fade-left" data-aos-delay={delay} data-aos-once="true"
         onMouseEnter={()=> setIsDelay(false)} onMouseLeave={()=>setIsDelay(true)}
@@ -17,6 +35,9 @@ const Skill = ({pngName,skillHeading,skills,delay}) => {
             <div className='main-skill-card'>
             <img src={pngName} alt={skillHeading}/>
             <span>{skillHeading}</span>
+            </div>
+            <div className='inner-skills'>
+                {innerSkills()}
             </div>
         </div>
     )

@@ -35,7 +35,7 @@ header {
 }
 
 .logo-letter {
-  font-family: 'Poppins';
+  font-family: 'none';
   font-weight: 800;
   position: relative;
   font-size: 3em;
@@ -130,7 +130,7 @@ header {
 
 .name {
   position: relative;
-  font-family: "Poppins";
+  font-family: "none";
 font-style: italic;
 font-weight: 900;
 font-size: 61px;
