@@ -73,11 +73,11 @@ const Skills = () => {
       skills: [
         {
           icon: selenium,
-          skill: "Selenium Automation"
+          skill: "Selenium"
         },
         {
           icon: restAssured,
-          skill: "Rest Assured API Automation"
+          skill: "Rest Assured"
         }
       ],
     },

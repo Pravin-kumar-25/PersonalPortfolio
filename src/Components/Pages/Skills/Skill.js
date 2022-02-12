@@ -33,11 +33,13 @@ const Skill = ({pngName,skillHeading,skills,delay}) => {
         onMouseEnter={()=> setIsDelay(false)} onMouseLeave={()=>setIsDelay(true)}
         >
             <div className='main-skill-card'>
+                <div className='skill-div'>
             <img src={pngName} alt={skillHeading}/>
             <span>{skillHeading}</span>
-            </div>
+                </div>
             <div className='inner-skills'>
                 {innerSkills()}
+            </div>
             </div>
         </div>
     )
