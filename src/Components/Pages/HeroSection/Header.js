@@ -16,8 +16,8 @@ const Header = () => {
             setcurrentNav("about")
         }
     }
-    const homeColor = currentNav==="home" ? "yellow" : "white";
-    const skillColor = currentNav==="skills" ? "yellow" : "white";
+    const homeColor = currentNav==="home" ? "var(--subColor)" : "white";
+    const skillColor = currentNav==="skills" ? "var(--subColor)" : "white";
     const aboutColor = currentNav==="about" ? "yellow" : "white";
 
 
