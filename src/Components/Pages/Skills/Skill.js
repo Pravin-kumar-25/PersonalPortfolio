@@ -16,16 +16,14 @@ const Skill = ({pngName,skillHeading,skills,delay}) => {
     const innerSkills = () => {
         let innerSkillsArray = [];
         skills.forEach(eachSkill => {
-            console.log("hh");
             let div = (
-                <div className='each-inner-skill' data-aos='fade-right'>
+                <div className='each-inner-skill' data-aos='fade-right' key={eachSkill.skill}>
                      <img src={eachSkill.icon} alt={eachSkill.skill} />
                      <span><span>--</span> {eachSkill.skill}</span>
                 </div>
             )
             innerSkillsArray.push(div)
         });
-        console.log("jk");
         return innerSkillsArray;
     }
     return (
