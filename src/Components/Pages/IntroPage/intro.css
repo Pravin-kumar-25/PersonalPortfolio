@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+.intro-section {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-text {
+    font-family: "Heebo", sans-serif;
+    /* font-size: 70px; */
+  }
+  
+  .hide {
+    overflow: hidden;
+  }
+  
+  .hide span {
+    transform: translateY(100%);
+    display: inline-block;
+    font-family: 'Bebas Neue', cursive;
+    background: linear-gradient(238.72deg, #FF0000 0%, #56124F 100%), linear-gradient(127.43deg, #00FFFF 0%, #FF4444 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(127.43deg, red 0%, #3300FF 100%);
+    background-blend-mode: hard-light, color-burn, color-dodge, normal;
+    background-clip: text;
+    font-size: 70px;
+    letter-spacing: 10px;
+    -webkit-text-stroke: 1px transparent;
+  }
+
+  .intro-text .hide:nth-child(1) {
+    -webkit-text-fill-color: transparent;
+    background-clip: none;
+  }

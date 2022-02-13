@@ -6,6 +6,7 @@ import ContactMePage from './Components/Pages/Contact/ContactMePage';
 import SideNavLink from './Components/Pages/SideNavBar/SideNavLink';
 import Skills from './Components/Pages/Skills/Skills'
 import AOS from 'aos';
+import Intro from './Components/Pages/IntroPage/Intro';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <SocialLinks />
       <HeroSectionBody setcontactPage={setcontactPage} />
       </div>
+      <Intro />
       <Skills />
     </>
   )
