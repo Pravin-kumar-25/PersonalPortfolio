@@ -1,5 +1,5 @@
 .skills-section {
-    background: linear-gradient(to bottom,white, var(--mainColor));
+    background: linear-gradient(to bottom, #ffffff, #ece1ff, #dfc0ff, #d99dff, #d874ff, #e75dec, #f540d7, #ff00be, #ff0094, #ff0069, #ff003d, #ff0000);
     width: 100%;
     min-height: 100vh;
     position: relative;

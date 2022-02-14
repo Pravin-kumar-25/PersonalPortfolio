@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import NavLink from './NavLink';
 import aos from 'aos';
 
@@ -20,11 +20,16 @@ const Header = () => {
     const skillColor = currentNav==="skills" ? "var(--subColor)" : "white";
     const aboutColor = currentNav==="about" ? "yellow" : "white";
 
+    const [render,setRender]= useState(false);
 
-    window.addEventListener("scroll",changeNavLinkColor);
+    useEffect(() => {
+      setTimeout(()=> {
+          setRender(true)
+      },3200)
+    })
     
-    return (
-        <header>
+    const renderComponent = () => {
+        return (
             <div className='header'>
                 <div className='header-logo' data-aos="slide-down">
                     <div className='logo-letter'>
@@ -44,6 +49,14 @@ const Header = () => {
                     </ul>
                 </div>
             </div>
+        )
+    }
+
+    window.addEventListener("scroll",changeNavLinkColor);
+    
+    return (
+        <header>
+            {render ? renderComponent() : null}
         </header>
     );
 };

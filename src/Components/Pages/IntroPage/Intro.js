@@ -16,7 +16,6 @@ const Intro = () => {
             introRef1.current,
             introRef2.current
         ]
-        console.log(introRefs);
         tl.to(introRefs,{y:"0%",stagger:1, duration:1})
         tl.to(introPageRef.current, {y:"-100%", duration:1, delay:0.5})
     })

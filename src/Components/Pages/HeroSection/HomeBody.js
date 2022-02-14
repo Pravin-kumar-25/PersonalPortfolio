@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ContactMe from '../Contact/ContactMe';
 import aos from 'aos';
 
 const HomeBody = ({ setcontactPage }) => {
     aos.init({
-        duration:1200
+        duration: 1200
     })
-    return (
-        <div className='main-body'>
-            <div className='hero-body'>
-                <div className='hero-body-details'>
-                    <div className='name' data-aos="fade-right">
+
+    const [render, setRender] = useState(false)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setRender(true)
+        }, 3000)
+    })
+
+    const renderComponent = () => {
+        return (
+            <>
+            <div className='name' data-aos="fade-right">
                         <span className='bounce'>H</span>
                         <span className='bounce'>i</span>
                         <span className='bounce'>,</span> <br />
@@ -41,6 +49,15 @@ const HomeBody = ({ setcontactPage }) => {
                         </span>
                     </div>
                     <ContactMe setcontactPage={setcontactPage} />
+            </>
+        )
+    }
+
+    return (
+        <div className='main-body'>
+            <div className='hero-body'>
+                <div className='hero-body-details'>
+                    {render ? renderComponent() : null}
                 </div>
                 <div className='hero-body-image'>
                 </div>
