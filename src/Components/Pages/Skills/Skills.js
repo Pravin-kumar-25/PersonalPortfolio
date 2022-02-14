@@ -19,6 +19,7 @@ import git from '../../Utils/pictures/git.png'
 import linux from '../../Utils/pictures/linux.png'
 import postman from '../../Utils/pictures/postman-icon.png'
 import aos from 'aos';
+import Three from '../Threejs/Three';
 
 const Skills = () => {
   aos.init()
@@ -104,7 +105,7 @@ const Skills = () => {
   return (
     <section className='skills-section' id='skills'>
       <div className='skills-threejs'>
-
+        <Three />
       </div>
       <span className='section-background-heading' data-aos="slide-up">SKILLS</span>
       <div className='skills-header' data-aos="zoom-in-up" data-aos-anchor-placement="top-center">

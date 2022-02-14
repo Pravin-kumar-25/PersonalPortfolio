@@ -120,3 +120,11 @@
 .each-inner-skill span span {
     color: black;
 }
+
+.skills-threejs {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 600px;
+    height: 500px;
+}
