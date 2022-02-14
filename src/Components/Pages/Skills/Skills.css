@@ -128,3 +128,11 @@
     width: 600px;
     height: 500px;
 }
+
+.skills-threejs-bottom {
+    position: absolute;
+    bottom: 0px;
+    right: -50px;
+    width: 600px;
+    height: 500px;
+}

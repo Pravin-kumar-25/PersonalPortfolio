@@ -107,6 +107,9 @@ const Skills = () => {
       <div className='skills-threejs'>
         <Three />
       </div>
+      <div className='skills-threejs-bottom'>
+        <Three />
+      </div>
       <span className='section-background-heading' data-aos="slide-up">SKILLS</span>
       <div className='skills-header' data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
         <h1>My skills</h1>
