@@ -5,6 +5,10 @@
   --thirdColor:white;
 }
 
+body{
+  /* overflow: hidden;  */
+}
+
 .heroSection {
   position: relative;
   width: 100%;

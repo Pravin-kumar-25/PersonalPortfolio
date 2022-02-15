@@ -102,13 +102,81 @@ const Skills = () => {
     },
   ]
 
+  const topSkillsObject = [
+    {
+      circle:true,
+      speed:0.02,
+      args:[1,0,2],
+      color:"yellow",
+      position:[1,1,1]
+    },
+    {
+      circle:false,
+      speed:0.01,
+      args:[1,1,1],
+      color:"orange",
+      position:[0,-1,0]
+    },
+    {
+      circle:false,
+      speed:0.02,
+      args:[1,1,2],
+      color:"red",
+      position:[2,-3,3]
+    },
+    {
+      circle:false,
+      speed:0.015,
+      args:[2,3,1],
+      color:"hotpink",
+      position:[5,0,2]
+    }
+  ]
+
+  const bottomSkillsObject = [
+    {
+      circle:true,
+      speed:0.02,
+      args:[1,0,2],
+      color:"violet",
+      position:[1,1,1]
+    },
+    {
+      circle:false,
+      speed:0.01,
+      args:[1,1,1],
+      color:"brown",
+      position:[0,-1,0]
+    },
+    {
+      circle:true,
+      speed:0.005,
+      args:[1,0,2],
+      color:"white",
+      position:[2,-3,3]
+    },
+    {
+      circle:false,
+      speed:0.015,
+      args:[1,3,2],
+      color:"red",
+      position:[4,-1,2]
+    }
+  ]
+
   return (
     <section className='skills-section' id='skills'>
       <div className='skills-threejs'>
-        <Three />
+        <Three directionalColor="blue" 
+          fov={70}
+          objects={topSkillsObject}
+        />
       </div>
       <div className='skills-threejs-bottom'>
-        <Three />
+        <Three directionalColor="blue"
+          fov={60}
+          objects={bottomSkillsObject}
+        />
       </div>
       <span className='section-background-heading' data-aos="slide-up">SKILLS</span>
       <div className='skills-header' data-aos="zoom-in-up" data-aos-anchor-placement="top-center">
