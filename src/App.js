@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './App.css';
 import HeroSectionBody from './Components/Pages/HeroSection/HeroSectionBody';
 import SocialLinks from './Components/Pages/SocialLinks/SocialLinks';
@@ -13,6 +13,11 @@ function App() {
   AOS.init({
     duration:1200
   })
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  })
+  
   
   const [contactPage, setcontactPage] = useState(false)
   let bodyDivStyle = {}
