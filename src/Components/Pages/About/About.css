@@ -1,0 +1,11 @@
+.aboutSection {
+    background: linear-gradient(to bottom, #fe0055, #ff004e, #ff0046, #ff003e, #ff0036, #ff0030, #fe002a, #fe0023, #fe001d, #fe0015, #fe000c, #fe0000);
+    background: #FE0010;
+    width: 100%;
+    /* background: linear-gradient(to bottom, #fe0018, #ff0039, #ff0054, #ff006d, #ff0085, #ff3ca2, #fb5bbd, #f574d5, #ed9eed, #eac2fc, #efe2ff, #ffffff); */
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+}

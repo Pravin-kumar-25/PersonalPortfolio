@@ -25,12 +25,12 @@
 }
 
 .skill-card {
-    background: var(--mainColor);
+    /* background: var(--mainColor); */
     display: flex;
     flex-direction: column;
     position: relative;
     padding: 2px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     margin: 10px;
     cursor: url(../../Utils/pictures/tap.png),pointer;
     height: 400px;
@@ -38,16 +38,18 @@
 }
 
   .skill-card[data-aos=fade-left][data-aos=fade-left].aos-animate:hover {
-    transform: scale(1.15);
+    transform: scale(1.025);
     transition-duration: .5s;
     transition-delay: 0ms;
-    box-shadow: 0px 0px 20px 0px black;
+    /* box-shadow: 0px 0px 20px 0px black; */
 
 }
 
 .skill-card:hover .main-skill-card{
-    background: var(--mainColor);
-    color: var(--subColor);
+    /* background: var(--mainColor); */
+    background: linear-gradient(238.72deg, #FF0000 0%, #56124F 100%), linear-gradient(127.43deg, #00FFFF 0%, #FF4444 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(127.43deg, red 0%, #3300FF 100%);
+    background-blend-mode: hard-light, color-burn, color-dodge, normal;
+    /* color: white; */
 }
 
 [data-aos][data-aos][data-aos-delay="1000"].aos-animate:hover, body[data-aos-delay="1000"] [data-aos].aos-animate:hover {
@@ -70,7 +72,7 @@
     border-radius: 20px;
     width: 100%;
     height: 100%;
-    background: black;
+    background: white;
     font-size: 20px;
     font-weight: 800;
     color: white;
@@ -80,6 +82,11 @@
 .skill-div {
     display: flex;
     position: relative;
+    background: linear-gradient(238.72deg, #FF0000 0%, #56124F 100%), linear-gradient(127.43deg, #00FFFF 0%, #FF4444 100%), radial-gradient(100.22% 100% at 70.57% 0%, #FF0000 0%, #00FFE0 100%), linear-gradient(127.43deg, red 0%, #3300FF 100%);
+    background-blend-mode: hard-light, color-burn, color-dodge, normal;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
     top: 30px;
     flex-direction: column;
     justify-content: flex-end;
@@ -108,6 +115,11 @@
 
 .skill-card:hover .skill-div{
     top: 0;
+    color: white;
+    background: white;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* background: none; */
 }
 
 .skill-card:hover .inner-skills {
@@ -118,7 +130,8 @@
     display: flex;
     align-items: center;
     font-weight: 700;
-    color: var(--subColor);
+    margin-top: 10px;
+    color: black;
 }
 
 .each-inner-skill img{

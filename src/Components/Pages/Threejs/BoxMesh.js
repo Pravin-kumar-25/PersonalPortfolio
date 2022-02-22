@@ -1,12 +1,12 @@
 import React, { useRef,useState } from 'react'
-import { useFrame, useLoader } from '@react-three/fiber'
-import { TextureLoader } from 'three';
+import { useFrame } from '@react-three/fiber'
+// import { TextureLoader } from 'three';
 import { useSpring, a } from "@react-spring/three";
-import blueTexture from '../../Utils/Textures/texture.jpg'
+// import blueTexture from '../../Utils/Textures/texture.jpg'
 
 
 const BoxMesh = ({ color, speed, args, position, isCircle }) => {
-    const [image] = useLoader(TextureLoader,[blueTexture]);
+    // const [image] = useLoader(TextureLoader,[blueTexture]);
     const meshRef = useRef(null);
     const [expand, setexpand] = useState(false)
 
@@ -21,13 +21,13 @@ const BoxMesh = ({ color, speed, args, position, isCircle }) => {
         rotation={[-Math.PI/2,0,0]}
             ref={meshRef}
             position={position}
-            castShadow
+            // castShadow
             scale={props.scale}
         >
             {isCircle ? <cylinderBufferGeometry attach='geometry' args={args} color={color} /> :
                 <boxBufferGeometry attach='geometry' args={args} />
             }
-            <meshStandardMaterial attach='material' color={color} map={image} />
+            <meshStandardMaterial attach='material' color={color} />
         </a.mesh>
     )
 }

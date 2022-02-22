@@ -150,9 +150,9 @@ const Skills = () => {
     },
     {
       circle:true,
-      speed:0.005,
+      speed:0.015,
       args:[1,0,2],
-      color:"white",
+      color:"orange",
       position:[2,-3,3]
     },
     {
@@ -173,7 +173,7 @@ const Skills = () => {
         />
       </div>
       <div className='skills-threejs-bottom'>
-        <Three directionalColor="blue"
+        <Three directionalColor="red"
           fov={60}
           objects={bottomSkillsObject}
         />

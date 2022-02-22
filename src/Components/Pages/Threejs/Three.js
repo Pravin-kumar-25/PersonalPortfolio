@@ -1,31 +1,31 @@
-import React , {Suspense} from 'react'
-import {Canvas} from '@react-three/fiber'
+import React, { Suspense } from 'react'
+import { Canvas } from '@react-three/fiber'
 import BoxMesh from './BoxMesh'
-import { OrbitControls} from '@react-three/drei'
+import { OrbitControls } from '@react-three/drei'
 
-const Three = ({directionalColor,fov,objects}) => {
+const Three = ({ directionalColor, fov, objects }) => {
 
   const renderComponents = () => {
-    return objects.map((object)=> {
+    return objects.map((object) => {
       return (
         <BoxMesh color={object.color} speed={object.speed} isCircle={object.circle}
-         position={object.position} 
-         key={object.position}
-         args={object.args}
-         />
+          position={object.position}
+          key={object.position}
+          args={object.args}
+        />
       )
     })
   }
 
   return (
     <Canvas
-    camera={{ position: [0, 0, 10]}}
-        
+      camera={{ position: [0, 0, 10] }}
+
     >
       <Suspense fallback={null}>
 
-        <ambientLight intensity={0.35}/>
-        <directionalLight  color={directionalColor} position={[0,-2,0]}
+        <ambientLight intensity={0.35} />
+        <directionalLight color={directionalColor} position={[0, -2, 0]}
         />
         <pointLight intensity={2.6} />
         {renderComponents()}
