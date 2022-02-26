@@ -19,31 +19,17 @@ function App() {
     window.scrollTo(0, 0)
   })
 
-
-  const [contactPage, setcontactPage] = useState(false)
-  let bodyDivStyle = {}
-
-  if (contactPage) {
-    bodyDivStyle = {
-      filter: "blur(3px)",
-      pointerEvents: "none",
-      userSelect: "none",
-    }
-  }
-
   return (
     <>
       <SideNavLink />
-      {
-        contactPage ? <ContactMePage setcontactPage={setcontactPage} /> : null
-      }
-      <div style={bodyDivStyle}>
+      <div>
         <SocialLinks />
-        <HeroSectionBody setcontactPage={setcontactPage} />
+        <HeroSectionBody />
       </div>
       <Intro />
       <Skills />
       <About />
+      <ContactMePage />
     </>
   )
 }

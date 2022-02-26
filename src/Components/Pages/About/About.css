@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 .aboutSection {
     background: linear-gradient(to bottom, #fe0055, #ff004e, #ff0046, #ff003e, #ff0036, #ff0030, #fe002a, #fe0023, #fe001d, #fe0015, #fe000c, #fe0000);
     background: #FE0010;
@@ -7,5 +10,85 @@
     position: relative;
     overflow: hidden;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.about-section-content {
+    width: 80%;
+    height: 70%;
+    /* background: white; */
+    z-index: 1;
+    display: flex;
+}
+
+.background {
+    position: absolute;
+}
+
+.about-me {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background: blue; */
+    color: pink;
+    position: relative;
+    top: 30px;
+}
+
+.about-object {
+    width: 50%;
+    height: 100%;
+    /* background: green; */
+}
+
+.about-me .about-heading {
+    font-size: 50px;
+    color: wheat;
+    font-weight: 800;
+    font-family: "Heebo", sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-heading span {
+    margin-left: 20px;
+
+}
+
+.about-heading::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    /* right: -19px; */
+    height: 100%;
+    background: yellow;
+    z-index: 2;
+    display: block;
+}
+
+.about-content {
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.about-content a {
+    color: rgb(240, 178, 188);
+    cursor: url(../../Utils/pictures/tap.png),pointer;
+}
+
+.about-content a:hover {
+    background: rgb(250, 124, 147);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-object {
+    background: url(../../Utils/pictures/hero_image.png);
+    background-position: 100px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
 }

@@ -323,6 +323,11 @@ section {
   height: 40px;
 }
 
+.contact-btn-div a {
+ text-decoration: none;
+ color: black;
+}
+
 #button {
   transition: 0.3s;
 }

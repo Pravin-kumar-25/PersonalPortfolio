@@ -1,123 +1,81 @@
-import React, { useState, useEffect,useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import "./ContactMePage.css"
+import Torus from './Torus';
 import { SiMinutemailer } from "react-icons/si";
 import { RiMailAddLine } from "react-icons/ri";
 import CloseButton from '../CloseButton/CloseButton';
 
-const ContactMePage = ({ setcontactPage }) => {
-    const [top, settop] = useState("none");
-    const [nameSpanStyle, setnameSpanStyle] = useState({});
-    const [emailSpanStyle, setemailSpanStyle] = useState({});
-    const [descriptionSpanStyle, setdescriptionSpanStyle] = useState({});
-
-    const setValue = (value) => {
-        settop("-50%")
-        setTimeout(() => {
-            setcontactPage(value)
-        }, 300)
-    }
-
-    const ref = useRef();
-
-    const escapeHandler = (event) => {
-        if(event.keyCode === 27) {
-            setValue(false)
-        }
-    }
-    useEffect(() => {
-        const closeContactDiv = (event) => {
-            if(ref.current.contains(event.target)){
-                return;
-            } else {
-                setValue(false)
-            }
-        }
-        document.addEventListener("keyup", escapeHandler);
-        document.body.addEventListener("click",closeContactDiv)
-        return () => {
-            document.removeEventListener("keyup", escapeHandler);
-            document.body.removeEventListener("click",closeContactDiv);
-        };
-    });
-
-    const onSubmit = (event) => {
-        event.preventDefault();
-    }
-
-    const onFocus = (event) => {
-        if (event.target.className === "name-class") {
-            setnameSpanStyle({
-                top: "10px",
-                fontSize: "30px",
-                fontWeight: "800"
-            })
-        } else if (event.target.className === "email-class") {
-            setemailSpanStyle({
-                top: "10px",
-                fontSize: "30px",
-                fontWeight: "800"
-            })
-        } else if (event.target.className === "description") {
-            setdescriptionSpanStyle({
-                top: "10px",
-                fontSize: "20px",
-                fontWeight: "800"
-            })
-        }
-    }
-
-    const onBlur = (event) => {
-        if (event.target.className === "name-class") {
-            if (event.target.value !== "") {
-                setnameSpanStyle({ top: "35px" })
-            } else {
-                setnameSpanStyle({})
-            }
-        } else if (event.target.className === "email-class") {
-            if (event.target.value !== "") {
-                setemailSpanStyle({ top: "35px" })
-            } else {
-                setemailSpanStyle({})
-            }
-        } else if (event.target.className === "description") {
-            if (event.target.value !== "") {
-                setdescriptionSpanStyle({ top: "35px" })
-            } else {
-                setdescriptionSpanStyle({})
-            }
-        }
-    }
+const ContactMePage = () => {
 
     return (
+        <section id='contact' className='contact-section'>
+            <div className='torus top'>
+            <div>
+                    <Torus color='red' directionLight='yellow' />
 
+                </div>
+                <div>
 
-        <div className='contact-me-div' style={{ top: top }} ref={ref}>
-            <div className='form-heading'>
-                <div> <RiMailAddLine/> CONTACT ME</div>
-                <CloseButton setcontactPage={setValue} />
+                    <Torus color='white' directionLight='red' />
+                </div>
+                <div>
+
+                    <Torus color='orange' directionLight='brown' />
+                </div>
             </div>
-            <form onSubmit={onSubmit} className='contact-me-form'>
-                <div id='name-input'>
-                    <span className='name-span' style={nameSpanStyle} >NAME</span>
-                    <input spellCheck="false" className='name-class' onFocus={onFocus} onBlur={onBlur} />
+            <span className='section-background-heading' data-aos="slide-up">CONTACT</span>
+            <div className='inner-contact-div'>
+                <div className='contact-form'>
+                    <div className='form-heading'>
+                        <span>
+                            PING ME....
+                        </span>
+                    </div>
+                    <form>
+                        <div>
+                            <input placeholder='Name' required name='name' autoComplete='off' />
+                        </div>
+                        <div>
+                            <input placeholder='Email' type='email' required name='email' autoComplete='off' />
+                        </div>
+                        <div>
+                            <textarea placeholder='Message' name='message' required rows='5' autoComplete='off' spellCheck='false'>
+                            </textarea>
+                        </div>
+                        <div className='submit-button'>
+                            <button>
+                                <div className="svg-wrapper-1">
+                                    <div className="svg-wrapper">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <span>Send</span>
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div id='email-input'>
-                    <span style={emailSpanStyle}>E-MAIL</span>
-                    <input spellCheck="false" className='email-class' onFocus={onFocus} onBlur={onBlur} />
+                <div className='contact-object'>
+
                 </div>
-                <div id='send-message-input'>
-                    <span style={descriptionSpanStyle}>Type your message..</span>
-                    <textarea className='description' onFocus={onFocus} onBlur={onBlur} />
+            </div>
+            <div className='torus bottom'>
+                <div>
+                    <Torus color='white' directionLight='red' />
+
                 </div>
-                <div className='submit'>
-                    <button>
-                        <SiMinutemailer size='25px' style={{ position: "absolute", left: "39px", top: "17px" }} />
-                        SEND
-                        <span className='btn-span'></span>
-                    </button>
+                <div>
+
+                    <Torus color='brown' directionLight='black' />
                 </div>
-            </form>
-        </div>
+                <div>
+
+                    <Torus color='orange' directionLight='yellow' />
+                </div>
+            </div>
+        </section>
     )
 };
 

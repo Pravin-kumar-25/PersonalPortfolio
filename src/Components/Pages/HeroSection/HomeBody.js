@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ContactMe from '../Contact/ContactMe';
 import aos from 'aos';
 
-const HomeBody = ({ setcontactPage }) => {
+const HomeBody = () => {
     aos.init({
         duration: 1200
     })
@@ -48,7 +48,7 @@ const HomeBody = ({ setcontactPage }) => {
                             I create Websites using react JS
                         </span>
                     </div>
-                    <ContactMe setcontactPage={setcontactPage} />
+                    <ContactMe />
             </>
         )
     }
