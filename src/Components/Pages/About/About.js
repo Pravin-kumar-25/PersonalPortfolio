@@ -1,6 +1,5 @@
 import React from 'react'
 import './About.css'
-import Human from './Human/Human'
 import Particles from 'particlesjs'
 import aos from 'aos'
 

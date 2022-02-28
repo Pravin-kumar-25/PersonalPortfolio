@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import BoxMesh from './BoxMesh'
-import { OrbitControls } from '@react-three/drei'
 
 const Three = ({ directionalColor, fov, objects }) => {
 
