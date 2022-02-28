@@ -1,16 +1,39 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import "./ContactMePage.css"
 import Torus from './Torus';
+import emailjs from '@emailjs/browser'
 import { SiMinutemailer } from "react-icons/si";
-import { RiMailAddLine } from "react-icons/ri";
-import CloseButton from '../CloseButton/CloseButton';
 
 const ContactMePage = () => {
+    const form = useRef()
+
+    const [emailSent, setEmailSent] = useState('-200px');
+
+    const onSubmit = (event) => {
+        event.preventDefault()
+        emailjs.sendForm('service_8b2ugsq', 'template_tia10n5', form.current, '9uxDAsY-T8kASoHlS')
+            .then((result) => {
+                console.log(result.text);
+                setEmailSent('40px');
+                setTimeout(() => {
+                    setEmailSent('-200px')
+                }, 2000)
+            }, (error) => {
+                console.log(error.text);
+            });
+
+
+        event.target.reset()
+    }
 
     return (
         <section id='contact' className='contact-section'>
+            <div className='emailSent' style={{ right: emailSent }}>
+                <SiMinutemailer color='green' />
+                <span>Email sent successfully</span>
+            </div>
             <div className='torus top'>
-            <div>
+                <div>
                     <Torus color='red' directionLight='yellow' />
 
                 </div>
@@ -31,7 +54,7 @@ const ContactMePage = () => {
                             PING ME....
                         </span>
                     </div>
-                    <form>
+                    <form ref={form} onSubmit={onSubmit}>
                         <div>
                             <input placeholder='Name' required name='name' autoComplete='off' />
                         </div>
@@ -43,7 +66,7 @@ const ContactMePage = () => {
                             </textarea>
                         </div>
                         <div className='submit-button'>
-                            <button>
+                            <button type='submit'>
                                 <div className="svg-wrapper-1">
                                     <div className="svg-wrapper">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -58,7 +81,7 @@ const ContactMePage = () => {
                     </form>
                 </div>
                 <div className='contact-object'>
-
+                    
                 </div>
             </div>
             <div className='torus bottom'>

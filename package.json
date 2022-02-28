@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.4.0",
+    "@googlemaps/js-api-loader": "^1.13.7",
+    "@googlemaps/react-wrapper": "^1.1.25",
+    "@react-google-maps/api": "^2.7.0",
     "@react-spring/three": "^9.4.3",
     "@react-three/drei": "^8.9.0",
     "@react-three/fiber": "^7.0.26",

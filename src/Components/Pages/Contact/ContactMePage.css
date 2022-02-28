@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     font-family: 'Bebas Neue', cursive;
+    transition: 0.5s all;
 
 }
 
@@ -114,7 +115,7 @@ textarea:focus-visible{
     /* height: 200px; */
     position: absolute;
     top: 60px;
-    color: wheat;
+    color: white;
 }
 
 .submit-button button {
@@ -202,4 +203,19 @@ textarea:focus-visible{
 .bottom {
     bottom: 0;
     left: 0;
+}
+
+.emailSent {
+    position: absolute;
+    top: 40px;
+    width: 200px;
+    height: 40px;
+    z-index: 5;
+    display: flex;
+    background: yellow;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    border-bottom: 4px solid rgb(7, 201, 7);
+    transition: 0.5s;
 }

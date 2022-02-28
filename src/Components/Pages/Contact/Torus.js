@@ -6,7 +6,6 @@ import { OrbitControls } from '@react-three/drei'
 const Mesh = ({ color }) => {
     const meshRef = useRef();
     let random =  Math.random() * (0.04 - 0.005) + 0.009
-    console.log(random);
     useFrame(() => {
         meshRef.current.rotation.x = meshRef.current.rotation.y += random
     })
