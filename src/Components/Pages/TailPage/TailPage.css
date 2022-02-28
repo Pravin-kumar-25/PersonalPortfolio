@@ -41,7 +41,7 @@
     flex-direction: column;
 }
 
-.social {
+.social-tail {
     display: flex;
     width: 150px;
     justify-content: space-between;
@@ -50,7 +50,7 @@
 
 }
 
-.social svg {
+.social-tail svg {
     position: relative;
     transition: 0.3s;
 }

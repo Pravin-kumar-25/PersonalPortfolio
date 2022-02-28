@@ -25,7 +25,7 @@ const TailPage = () => {
         <div className='contact-address'>
           <div className='sub-contact-address'>
             <h3>Social Links</h3>
-            <div className='social'>
+            <div className='social-tail'>
               <TailSocialLinks Children={GrFacebookOption} URL="https://www.facebook.com/pravin.kumar25M/" />
               <TailSocialLinks Children={AiFillInstagram} URL="https://www.instagram.com/__p_r_a_v_i_n___/" />
               <TailSocialLinks Children={ImLinkedin2} URL="https://www.linkedin.com/in/pravin-kumar-m-751576203/" />
