@@ -35,8 +35,7 @@ const TailPage = () => {
         </div>
       </div>
       <div className='with-love'>
-        <span>Created with </span>
-        <a href='#home'>Get code</a>
+        <span>Created with 💓 </span><span>By Pravin Kumar</span>
       </div>
 
     </section>
