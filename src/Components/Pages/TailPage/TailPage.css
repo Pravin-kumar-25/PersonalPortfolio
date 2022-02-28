@@ -7,12 +7,12 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    color: white;
 }
 
 .tail-content {
     width: 80%;
     height: 80%;
-    background: blue;
     display: flex;
     
 }
@@ -24,10 +24,42 @@
 }
 
 .social-links-tail {
-    background: yellow;
+    background: green;
 }
 
 .contact-address {
-    background: forestgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+.sub-contact-address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+
+.social svg {
+    position: relative;
+    transition: 0.3s;
+}
+
+.each-link {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }

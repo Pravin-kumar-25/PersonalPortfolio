@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import HeroSectionBody from './Components/Pages/HeroSection/HeroSectionBody';
 import SocialLinks from './Components/Pages/SocialLinks/SocialLinks';
