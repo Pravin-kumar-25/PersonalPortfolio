@@ -174,4 +174,8 @@
     .all-skills {
         top: 0px;
     }
+
+    .inner-skills {
+        top: 2%;
+    }
 }
