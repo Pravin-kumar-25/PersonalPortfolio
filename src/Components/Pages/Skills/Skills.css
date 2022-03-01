@@ -165,6 +165,13 @@
     }
 
     .all-skills {
-        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:777px) {
+    .all-skills {
+        top: 0px;
     }
 }
