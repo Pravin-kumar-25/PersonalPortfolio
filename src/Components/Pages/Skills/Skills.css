@@ -158,3 +158,13 @@
     height: 500px;
     z-index: 1;
 }
+
+@media screen and (max-width:1360px) {
+    .skill-card {
+        height: 300px;
+    }
+
+    .all-skills {
+        display: grid;
+    }
+}

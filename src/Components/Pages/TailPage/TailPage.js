@@ -14,7 +14,7 @@ const TailPage = () => {
           <div className='sub-contact-address'>
             <h3>Contact</h3>
             <span><span>Phone :</span> +91 88701 88247</span>
-            <span><span>Email :</span> pravinkumar3725@gmail.com</span>
+            <span>Email : pravinkumar3725@gmail.com</span>
           </div>
           <div className='sub-contact-address'>
             <h3>Address</h3>

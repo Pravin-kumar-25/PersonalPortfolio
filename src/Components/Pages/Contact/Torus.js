@@ -18,6 +18,8 @@ const Mesh = ({ color }) => {
     )
 }
 
+const enableZoom = false;
+
 const Torus = ({ color, directionalLight }) => {
     return (
         <Canvas
@@ -28,7 +30,7 @@ const Torus = ({ color, directionalLight }) => {
             <pointLight intensity={1.6} position={[2, 3, 1]} />
 
             <Mesh color={color} />
-            <OrbitControls enableZoom='false' />
+            <OrbitControls enableZoom={enableZoom} />
         </Canvas>
     )
 }
