@@ -233,9 +233,19 @@ textarea:focus-visible{
 
 @media screen and (max-width:660px) {
     .contact-form .form-heading{
+        position: relative;
         width: 100%;
     }
     .contact-form form {
         width: 100%;
+    }
+
+    .contact-form {
+        height: 100%;
+    }
+
+    .inner-contact-div {
+        width: 95%;
+        /* height: ; */
     }
 }

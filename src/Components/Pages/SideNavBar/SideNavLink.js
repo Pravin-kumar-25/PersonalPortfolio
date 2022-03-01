@@ -7,7 +7,7 @@ import { IoMdContact } from "react-icons/io";
 const SideNavLink = () => {
   return (
       <div className='side-nav-div'>
-        <ul className='side-ul-list'>
+        {/* <ul className='side-ul-list'>
           <NavLink heading='home'>
             <FaHome />
           </NavLink >
@@ -17,7 +17,7 @@ const SideNavLink = () => {
           <NavLink heading='about'>
             <IoMdContact />
           </NavLink>
-        </ul>
+        </ul> */}
       </div>
   );
 };
