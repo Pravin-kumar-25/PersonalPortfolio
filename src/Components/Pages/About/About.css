@@ -102,3 +102,14 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width:416px) {
+    .about-heading span {
+        font-size: 30px;
+    }
+
+    .about-heading {
+        display: flex;
+        align-items: center;
+    }
+}

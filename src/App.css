@@ -456,6 +456,7 @@ input {
   pointer-events: none;
   color: rgba(255, 255, 255, 0.5);
   font-size: 400px;
+  font-family: 'Poppins',sans-serif;
   font-weight: 800;
   user-select: none;
   opacity: 0.25;
@@ -467,6 +468,13 @@ input {
 @media screen and (max-width:1215px) {
   .hero-body-details {
     height: auto;
+  }
+}
+
+@media screen and (max-width:1120px) {
+  .section-background-heading {
+    /* left: 20px; */
+    font-size: 200px;
   }
 }
 
@@ -496,9 +504,13 @@ input {
   .main-body {
     align-items: flex-start;
   }
+  .hero-body {
+    width: 100%;
+  }
   .name {
     font-size: 40px;
     line-height: 35px;
+    bottom: 20px;
   }
   .sub-heading span {
     font-size: 40px;
@@ -508,6 +520,10 @@ input {
     left: 30px;
     top: 25px;
   }
+
+  .hero-body-details {
+    height: 100%;
+  }
 }
 
 @media screen and (max-width:650px) {
@@ -515,8 +531,8 @@ input {
     width: 300px;
   }
   .section-background-heading {
-    font-size: 125px;
-    right: -50%;
+    font-size: 200px;
+    /* right: -50%; */
   }
 }
 
@@ -527,5 +543,8 @@ input {
   }
   .main-detail span{
     font-size: 17px;
+  }
+  .section-background-heading {
+    font-size: 100px;
   }
 }
