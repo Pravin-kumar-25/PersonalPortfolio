@@ -246,6 +246,8 @@ textarea:focus-visible{
 
     .inner-contact-div {
         width: 95%;
+        background: none;
+        border: none;
         /* height: ; */
     }
 }

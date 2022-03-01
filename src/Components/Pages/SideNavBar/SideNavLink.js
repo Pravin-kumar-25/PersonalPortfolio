@@ -1,8 +1,8 @@
 import React from 'react';
-import NavLink from '../HeroSection/NavLink'
-import { FaHome } from "react-icons/fa";
-import { GiSkills } from "react-icons/gi";
-import { IoMdContact } from "react-icons/io";
+// import NavLink from '../HeroSection/NavLink'
+// import { FaHome } from "react-icons/fa";
+// import { GiSkills } from "react-icons/gi";
+// import { IoMdContact } from "react-icons/io";
 
 const SideNavLink = () => {
   return (
