@@ -1,0 +1,105 @@
+.side-nav-div {
+    position: fixed;
+    display: none;
+    top: 15px;
+    z-index: 10;
+}
+
+.burger-menu {
+    position: relative;
+    display: flex;
+    right: 15px;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.burger-menu div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    cursor: pointer;
+}
+
+.burger-menu div:active {
+    background: none;
+}
+
+.burger-menu span {
+    display: block;
+    width: 45px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+}
+
+.burger-menu span:nth-child(2) {
+    width: 30px;
+}
+
+.burger-menu span:nth-child(3) {
+    width: 20px;
+}
+
+.floating-links {
+    position: relative;
+    top: 15px;
+    left: 700px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.floating-links ul {
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    border-radius: 20px;
+}
+
+.floating-links li {
+    list-style-type: none;
+    width: 100%;
+}
+
+.floating-links a {
+    width: 100%;
+    text-decoration: none;
+}
+
+.floating-links div {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+}
+
+.top-nav {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.bottom-nav {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.floating-links div:active {
+    background: rgba(255, 255, 255, 1.5);
+}
+
+@media screen and (max-width:856px) {
+    .side-nav-div {
+        display: block;
+    }
+}
+

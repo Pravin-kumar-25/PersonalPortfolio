@@ -7,6 +7,7 @@
 
 body{
   /* overflow: hidden;  */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .heroSection {
@@ -333,11 +334,17 @@ section {
 #button {
   transition: 0.3s;
 }
+#button:active {
+  background: none;
+}
+
 .contact-btn-div:hover #button{
   background: yellow;
   margin-top: -5px;
   box-shadow: -10px 10px 5px 0px black;
 }
+
+
 
 .btn span {
   color: black;
@@ -412,6 +419,8 @@ input {
   outline: none;
 }
 
+
+
 .section-background-heading {
   position: absolute;
   pointer-events: none;
@@ -456,10 +465,6 @@ input {
   .social-links,
   .nav-links {
     display: none;
-  }
-
-  .side-nav-div {
-    
   }
 
   .main-body {
