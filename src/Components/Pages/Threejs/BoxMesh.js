@@ -27,7 +27,7 @@ const BoxMesh = ({ color, speed, args, position, isCircle }) => {
             {isCircle ? <cylinderBufferGeometry attach='geometry' args={args} color={color} /> :
                 <boxBufferGeometry attach='geometry' args={args} />
             }
-            <meshStandardMaterial attach='material' color={color} />
+            <meshPhongMaterial attach='material' color={color} />
         </a.mesh>
     )
 }

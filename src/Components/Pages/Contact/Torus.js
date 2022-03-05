@@ -12,8 +12,8 @@ const Mesh = ({ color }) => {
 
     return (
         <mesh ref={meshRef}>
-            <torusGeometry attach='geometry' args={[10, 3, 16, 100]} />
-            <meshPhongMaterial attach='material' color={color} />
+            <torusBufferGeometry attach='geometry' args={[10, 3, 16, 100]} />
+            <meshLambertMaterial attach='material' color={color} />
         </mesh>
     )
 }
